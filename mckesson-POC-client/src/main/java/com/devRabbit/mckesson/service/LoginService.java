@@ -7,6 +7,7 @@ import com.devRabbit.mckesson.entity.Login;
 @Service
 public interface LoginService {
 
-	public Login validate( ) ;
+	public Login test() ;
+	public String validate(Login login ) ;
 	
 }
