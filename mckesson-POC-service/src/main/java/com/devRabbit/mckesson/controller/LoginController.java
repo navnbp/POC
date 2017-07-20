@@ -33,7 +33,7 @@ public class LoginController {
 	
 	@GetMapping("/fill")
 	public String login() {
-		loginService.save(new Login("admin", "admin"));
+		loginService.addLogin(new Login("admin", "admin"));
 		
 		return "Data Added";
 	}
@@ -81,7 +81,7 @@ public class LoginController {
 	
 	@PostMapping(value = "/add")
 	public String add(@RequestBody final Login login) {
-		loginService.save(login);
+		loginService.addLogin(login);
 		return login.getUserName();
 	}
 	

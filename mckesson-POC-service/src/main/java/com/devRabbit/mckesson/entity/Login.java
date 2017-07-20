@@ -1,12 +1,14 @@
 package com.devRabbit.mckesson.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Login {
+public class Login implements Serializable  {
 	
 	@Id
 	@GeneratedValue
