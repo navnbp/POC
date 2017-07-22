@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link href="@{/css/style.css}" rel="stylesheet" type="text/css" />
+<title>Add Distribution Center</title>
+</head>
+<body>
+	
+	<form th:action="@{/distribution/add}" th:object="${distribution}" method="post" >
+
+
+	<p>Distribution Center Name</p><p>	<input type="text" name="name" th:field="*{name}" /></p>
+	 
+	<p>Address</p><p>		<input type="text" name="address" th:field="*{address.address}" /></p>
+		<p>City</p><p>		<input type="text" name="city" th:field="*{address.city}" /></p>
+		<p>State</p><p>		<input type="text" name="state" th:field="*{address.state}" /></p>
+		<p>Zip Code</p><p>		<input type="text" name="zip" th:field="*{address.zip}" /></p>
+		<p>Phone</p><p>		<input type="text" name="phone" th:field="*{contactDetails.phone}" /></p>
+		<p>Email</p><p>		<input type="text" name="emailId" th:field="*{contactDetails.emailId}" /></p>
+	
+		<p>DEA Number</p><p>		<input type="text" name="deaNumber" th:field="*{deaNumber}" /></p>
+		<p>ERV Min</p><p>		<input type="text" name="ervMin" th:field="*{ervMin}" /></p>
+		<p>Write Off</p><p>		<input type="text" name="writeOff" th:field="*{writeOff}" /></p>
+	
+	
+	<p>	<input type="submit" value="Submit" style="height:20px;width:70px" /> </p>
+	<p>	<input type="reset" value="Reset"  style="height:20px;width:70px"/> </p>
+	 </form>
+
+</body>
+</html>

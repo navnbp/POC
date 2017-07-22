@@ -11,8 +11,16 @@ public class Login {
 	private Boolean isActive=true;
 	private int wrongPasswordAttempt=0;
 	private Boolean isLocked=false;
+	private Boolean isAdmin=false;
 	
-	
+	public Boolean getIsAdmin() {
+		return isAdmin;
+	}
+
+	public void setIsAdmin(Boolean isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+
 	public Login() {}
 	
 	public Login(String username,String pwd) 

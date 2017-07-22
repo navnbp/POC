@@ -15,7 +15,6 @@ import com.devRabbit.mckesson.entity.Login;
 import com.devRabbit.mckesson.service.LoginService;
 
 @Controller()
-
 @RequestMapping(value="/login")
 public class LoginController {
 	
@@ -24,14 +23,14 @@ public class LoginController {
 	
 	
 	
-	
+
 	@GetMapping
 	public String login(Model model) 
 	{	
 		model.addAttribute("login", new Login());
 		
 //		Login login= loginService.test();
-		return "login/login";
+		return "login/signin";
 
 	}
 	
